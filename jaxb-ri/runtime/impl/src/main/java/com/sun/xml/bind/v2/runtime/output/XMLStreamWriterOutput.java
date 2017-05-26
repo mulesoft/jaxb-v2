@@ -48,7 +48,6 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
 import com.sun.xml.bind.marshaller.CharacterEscapeHandler;
-import com.sun.xml.bind.marshaller.NoEscapeHandler;
 import com.sun.xml.bind.v2.runtime.JAXBContextImpl;
 import com.sun.xml.bind.v2.runtime.XMLSerializer;
 
@@ -87,7 +86,7 @@ public class XMLStreamWriterOutput extends XmlOutputAbstractImpl {
         }
 
         CharacterEscapeHandler xmlStreamEscapeHandler = escapeHandler != null ?
-                escapeHandler : NoEscapeHandler.theInstance;
+                escapeHandler : NewLineEscapeHandler.theInstance;
 
         // otherwise the normal writer.
         return new XMLStreamWriterOutput(out, xmlStreamEscapeHandler);
@@ -230,6 +229,44 @@ public class XMLStreamWriterOutput extends XmlOutputAbstractImpl {
             return c.getConstructor(STAXEX_WRITER_CLASS);
         } catch (Throwable e) {
             return null;
+        }
+    }
+
+    /**
+     * Performs character escaping only for new lines.
+     */
+    private static class NewLineEscapeHandler implements CharacterEscapeHandler {
+
+        public static final NewLineEscapeHandler theInstance = new NewLineEscapeHandler();
+
+        @Override
+        public void escape(char[] ch, int start, int length, boolean isAttVal, Writer out) throws IOException {
+            int limit = start+length;
+            int lastEscaped = start;
+            for (int i = start; i < limit; i++) {
+                char c = ch[i];
+                if (c == '\r' || c == '\n') {
+                    if (i != lastEscaped) {
+                        out.write(ch, lastEscaped, i - lastEscaped);
+                    }
+                    lastEscaped = i + 1;
+                    if (out instanceof XmlStreamOutWriterAdapter) {
+                        try {
+                            ((XmlStreamOutWriterAdapter)out).writeEntityRef("#x" + Integer.toHexString(c));
+                        } catch (XMLStreamException e) {
+                            throw new IOException("Error writing xml stream", e);
+                        }
+                    } else {
+                        out.write("&#x");
+                        out.write(Integer.toHexString(c));
+                        out.write(';');
+                    }
+                }
+            }
+
+            if (lastEscaped != limit) {
+                out.write(ch, lastEscaped, length);
+            }
         }
     }
 
