@@ -48,7 +48,7 @@
     <parent>
         <groupId>com.sun.xml.bind.mvn</groupId>
         <artifactId>jaxb-bundles</artifactId>
-        <version>2.3.0</version>
+        <version>2.3.0-MULE-001-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -61,12 +61,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>org.mule.glassfish.jaxb</groupId>
             <artifactId>jaxb-core</artifactId>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>org.mule.glassfish.jaxb</groupId>
             <artifactId>txw2</artifactId>
             <version>${project.version}</version>
             <optional>true</optional>
@@ -119,13 +119,13 @@
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-core</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-parent</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
@@ -212,14 +212,14 @@
                             <skip>${skipSources}</skip>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>jaxb-core</artifactId>
                                     <classifier>sources</classifier>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.sources.dir}</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>txw2</artifactId>
                                     <classifier>sources</classifier>
                                     <overWrite>false</overWrite>
@@ -245,13 +245,13 @@
                             <skip>false</skip>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>jaxb-core</artifactId>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.classes.dir}</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>txw2</artifactId>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.classes.dir}</outputDirectory>
@@ -296,9 +296,9 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>org.glassfish.jaxb:jaxb-core</include>
+                                    <include>org.mule.glassfish.jaxb:jaxb-core</include>
                                     <include>com.sun.istack:istack-commons-runtime</include>
-                                    <include>org.glassfish.jaxb:txw2</include>
+                                    <include>org.mule.glassfish.jaxb:txw2</include>
                                 </includes>
                                 <excludes>
                                     <exclude>javax.xml.bind:jaxb-api</exclude>
