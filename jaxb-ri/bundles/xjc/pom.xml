@@ -48,7 +48,7 @@
     <parent>
         <groupId>com.sun.xml.bind.mvn</groupId>
         <artifactId>jaxb-bundles</artifactId>
-        <version>2.3.0</version>
+        <version>2.3.0-MULE-001-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -65,19 +65,19 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>org.mule.glassfish.jaxb</groupId>
             <artifactId>jaxb-xjc</artifactId>
             <version>${project.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>org.mule.glassfish.jaxb</groupId>
             <artifactId>codemodel</artifactId>
             <version>${project.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>org.mule.glassfish.jaxb</groupId>
             <artifactId>xsom</artifactId>
             <version>${project.version}</version>
             <optional>true</optional>
@@ -102,7 +102,7 @@
             </activation>
             <dependencies>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>jaxb-xjc-jdk9</artifactId>
                     <version>${project.version}</version>
                     <optional>true</optional>
@@ -124,7 +124,7 @@
                                     <excludes>META-INF/**</excludes>
                                     <artifactItems>
                                         <artifactItem>
-                                            <groupId>org.glassfish.jaxb</groupId>
+                                            <groupId>org.mule.glassfish.jaxb</groupId>
                                             <artifactId>jaxb-xjc-jdk9</artifactId>
                                             <classifier>sources</classifier>
                                             <overWrite>false</overWrite>
@@ -144,7 +144,7 @@
                                     <excludes>META-INF/**</excludes>
                                     <artifactItems>
                                         <artifactItem>
-                                            <groupId>org.glassfish.jaxb</groupId>
+                                            <groupId>org.mule.glassfish.jaxb</groupId>
                                             <artifactId>jaxb-xjc-jdk9</artifactId>
                                             <overWrite>false</overWrite>
                                             <outputDirectory>${generated.classes.dir}/META-INF/versions/9</outputDirectory>
@@ -189,13 +189,13 @@
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-xjc</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-parent</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
@@ -282,14 +282,14 @@
                             <skip>${skipSources}</skip>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>jaxb-xjc</artifactId>
                                     <classifier>sources</classifier>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.sources.dir}</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>xsom</artifactId>
                                     <classifier>sources</classifier>
                                     <overWrite>false</overWrite>
@@ -303,7 +303,7 @@
                                     <outputDirectory>${generated.sources.dir}</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>codemodel</artifactId>
                                     <classifier>sources</classifier>
                                     <overWrite>false</overWrite>
@@ -343,13 +343,13 @@
                             <skip>false</skip>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>jaxb-xjc</artifactId>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.classes.dir}</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>xsom</artifactId>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.classes.dir}</outputDirectory>
@@ -361,7 +361,7 @@
                                     <outputDirectory>${generated.classes.dir}</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>codemodel</artifactId>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.classes.dir}</outputDirectory>
@@ -449,9 +449,9 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>org.glassfish.jaxb:jaxb-xjc</include>
-                                    <include>org.glassfish.jaxb:codemodel</include>
-                                    <include>org.glassfish.jaxb:xsom</include>
+                                    <include>org.mule.glassfish.jaxb:jaxb-xjc</include>
+                                    <include>org.mule.glassfish.jaxb:codemodel</include>
+                                    <include>org.mule.glassfish.jaxb:xsom</include>
                                     <include>com.sun.istack:istack-commons-tools</include>
                                     <include>com.sun.xml.dtd-parser:dtd-parser</include>
                                     <include>com.sun.xml.bind.external:rngom</include>
@@ -459,10 +459,10 @@
                                 </includes>
 
                                 <excludes>
-                                    <exclude>org.glassfish.jaxb:jaxb-core</exclude>
-                                    <exclude>org.glassfish.jaxb:jaxb-xjc-jdk9</exclude>
+                                    <exclude>org.mule.glassfish.jaxb:jaxb-core</exclude>
+                                    <exclude>org.mule.glassfish.jaxb:jaxb-xjc-jdk9</exclude>
                                     <exclude>javax.xml.bind:jaxb-api</exclude>
-                                    <exclude>org.glassfish.jaxb:txw2</exclude>
+                                    <exclude>org.mule.glassfish.jaxb:txw2</exclude>
                                     <exclude>javax.xml.stream:stax-api</exclude>
                                     <exclude>com.sun.istack:istack-commons-runtime</exclude>
                                     <exclude>org.apache.ant:ant</exclude>
