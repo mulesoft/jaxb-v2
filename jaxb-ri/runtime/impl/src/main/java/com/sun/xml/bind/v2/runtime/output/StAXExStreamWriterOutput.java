@@ -42,7 +42,6 @@ package com.sun.xml.bind.v2.runtime.output;
 
 import javax.xml.stream.XMLStreamException;
 
-import com.sun.xml.bind.marshaller.NoEscapeHandler;
 import com.sun.xml.bind.v2.runtime.unmarshaller.Base64Data;
 
 import org.jvnet.staxex.XMLStreamWriterEx;
@@ -56,7 +55,7 @@ public final class StAXExStreamWriterOutput extends XMLStreamWriterOutput {
     private final XMLStreamWriterEx out;
 
     public StAXExStreamWriterOutput(XMLStreamWriterEx out) {
-        super(out, NoEscapeHandler.theInstance);
+        super(out);
         this.out = out;
     }
 
