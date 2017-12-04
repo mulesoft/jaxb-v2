@@ -54,7 +54,6 @@
 
     <groupId>com.sun.xml.bind</groupId>
     <artifactId>jaxb-bom-ext</artifactId>
-    <version>2.3.0-MULE-001-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>JAXB BOM with ALL dependencies</name>
