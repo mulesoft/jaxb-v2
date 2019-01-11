@@ -114,7 +114,7 @@
 
                 <!-- Runtime -->
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>jaxb-runtime</artifactId>
                     <version>${jaxb.version}</version>
                 </dependency>
@@ -160,12 +160,12 @@
             <programlisting language="xml"><![CDATA[
             <!-- Tooling dependencies -->
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>org.mule.glassfish.jaxb</groupId>
                 <artifactId>jaxb-xjc</artifactId>
                 <version>${jaxb.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.glassfish.jaxb</groupId>
+                <groupId>org.mule.glassfish.jaxb</groupId>
                 <artifactId>jaxb-jxc</artifactId>
                 <version>${jaxb.version}</version>
             </dependency>

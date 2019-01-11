@@ -48,7 +48,7 @@
     <parent>
         <groupId>com.sun.xml.bind.mvn</groupId>
         <artifactId>jaxb-bundles</artifactId>
-        <version>2.4.0-SNAPSHOT</version>
+        <version>2.3.0-MULE-002-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -63,7 +63,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>org.mule.glassfish.jaxb</groupId>
             <artifactId>jaxb-jxc</artifactId>
             <version>${project.version}</version>
             <optional>true</optional>
@@ -96,13 +96,13 @@
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-jxc</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
                 </dependency>
                 <dependency>
-                    <groupId>org.glassfish.jaxb</groupId>
+                    <groupId>org.mule.glassfish.jaxb</groupId>
                     <artifactId>osgi-test-parent</artifactId>
                     <version>${project.version}</version>
                     <scope>test</scope>
@@ -203,7 +203,7 @@
                             <skip>${skipSources}</skip>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>jaxb-jxc</artifactId>
                                     <classifier>sources</classifier>
                                     <overWrite>false</overWrite>
@@ -223,7 +223,7 @@
                             <skip>false</skip>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.glassfish.jaxb</groupId>
+                                    <groupId>org.mule.glassfish.jaxb</groupId>
                                     <artifactId>jaxb-jxc</artifactId>
                                     <overWrite>false</overWrite>
                                     <outputDirectory>${generated.classes.dir}</outputDirectory>

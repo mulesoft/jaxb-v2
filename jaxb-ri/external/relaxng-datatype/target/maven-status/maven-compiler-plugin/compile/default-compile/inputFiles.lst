@@ -1,0 +1,11 @@
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/DatatypeStreamingValidator.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/helpers/DatatypeLibraryLoader.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/ValidationContext.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/Datatype.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/DatatypeLibraryFactory.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/helpers/StreamingValidatorImpl.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/module-info.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/DatatypeException.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/DatatypeBuilder.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/DatatypeLibrary.java
+/Users/anosenzo/GitHub/jaxb-v2/jaxb-ri/external/relaxng-datatype/src/main/java/com/sun/tools/rngdatatype/helpers/ParameterlessDatatypeBuilder.java
