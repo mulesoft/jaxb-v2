@@ -51,7 +51,7 @@
         <relativePath>../bom/pom.xml</relativePath>
         <version>2.3.1-MULE-002-SNAPSHOT</version>
     </parent>
-
+                  
     <groupId>com.sun.xml.bind</groupId>
     <artifactId>jaxb-bom-ext</artifactId>
 
