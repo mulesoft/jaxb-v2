@@ -54,3 +54,5 @@
 /jaxb-ri/xsom/target/
 /jaxb-ri/jaxb-xjc-jdk9/target/
 /jaxb-ri/jaxb-jxc-jdk9/target/
+
+/jaxb-ri/docs/release-documentation/target/
